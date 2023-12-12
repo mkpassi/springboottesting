@@ -1,11 +1,11 @@
 package com.mkpassi.springboottesting.buisness;
 
-import com.mkpassi.protobuf.SpringTestingProtobuf;
 import com.mkpassi.protobuf.SpringTestingProtobuf.Item;
+import com.mkpassi.springboottesting.service.IItemBusinessService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DummyItemBusinessService implements ItemBuisnessService{
+public class DummyItemBusinessService implements IItemBusinessService {
 
 	/** Return Hardcoded item **/
 	@Override

@@ -1,11 +1,10 @@
 package com.mkpassi.springboottesting.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import com.mkpassi.protobuf.SpringTestingProtobuf.Item;
-import com.mkpassi.springboottesting.buisness.ItemBuisnessService;
+import com.mkpassi.springboottesting.service.IItemBusinessService;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +22,8 @@ class ItemControllerTest {
   @Autowired
   private MockMvc mockMvc;
 
-  @MockBean
-  private ItemBuisnessService buisnessService;
+  @MockBean(name = "itemBusinessService")
+  private IItemBusinessService buisnessService;
 
 
   @Test

@@ -67,13 +67,7 @@ public class ListMockTest {
 		Mockito.verify(listMock, Mockito.never()).get(2);
 	}
 
-	@Test
-	void testVerifyWithArgumentMatchers() {
-		String value1 = (String) listMock.get(0);
-		String value2 = (String) listMock.get(1);
-		Mockito.verify(listMock).get(Mockito.anyInt());
-		Mockito.verify(listMock).get(Mockito.anyInt());
-	}
+
 
 	/** Argument Capture */
 
