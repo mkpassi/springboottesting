@@ -15,6 +15,788 @@ public final class SpringTestingProtobuf {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface ItemListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mkpassi.ItemList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    java.util.List<com.mkpassi.protobuf.SpringTestingProtobuf.Item> 
+        getItemsList();
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    com.mkpassi.protobuf.SpringTestingProtobuf.Item getItems(int index);
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    int getItemsCount();
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    java.util.List<? extends com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder> 
+        getItemsOrBuilderList();
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder getItemsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code mkpassi.ItemList}
+   */
+  public static final class ItemList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mkpassi.ItemList)
+      ItemListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ItemList.newBuilder() to construct.
+    private ItemList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ItemList() {
+      items_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ItemList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mkpassi.protobuf.SpringTestingProtobuf.internal_static_mkpassi_ItemList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mkpassi.protobuf.SpringTestingProtobuf.internal_static_mkpassi_ItemList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.class, com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.Builder.class);
+    }
+
+    public static final int ITEMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.mkpassi.protobuf.SpringTestingProtobuf.Item> items_;
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.mkpassi.protobuf.SpringTestingProtobuf.Item> getItemsList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder> 
+        getItemsOrBuilderList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    @java.lang.Override
+    public int getItemsCount() {
+      return items_.size();
+    }
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    @java.lang.Override
+    public com.mkpassi.protobuf.SpringTestingProtobuf.Item getItems(int index) {
+      return items_.get(index);
+    }
+    /**
+     * <code>repeated .mkpassi.Item items = 1;</code>
+     */
+    @java.lang.Override
+    public com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder getItemsOrBuilder(
+        int index) {
+      return items_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < items_.size(); i++) {
+        output.writeMessage(1, items_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < items_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, items_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mkpassi.protobuf.SpringTestingProtobuf.ItemList)) {
+        return super.equals(obj);
+      }
+      com.mkpassi.protobuf.SpringTestingProtobuf.ItemList other = (com.mkpassi.protobuf.SpringTestingProtobuf.ItemList) obj;
+
+      if (!getItemsList()
+          .equals(other.getItemsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getItemsCount() > 0) {
+        hash = (37 * hash) + ITEMS_FIELD_NUMBER;
+        hash = (53 * hash) + getItemsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mkpassi.protobuf.SpringTestingProtobuf.ItemList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code mkpassi.ItemList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mkpassi.ItemList)
+        com.mkpassi.protobuf.SpringTestingProtobuf.ItemListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mkpassi.protobuf.SpringTestingProtobuf.internal_static_mkpassi_ItemList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mkpassi.protobuf.SpringTestingProtobuf.internal_static_mkpassi_ItemList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.class, com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.Builder.class);
+      }
+
+      // Construct using com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+        } else {
+          items_ = null;
+          itemsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mkpassi.protobuf.SpringTestingProtobuf.internal_static_mkpassi_ItemList_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mkpassi.protobuf.SpringTestingProtobuf.ItemList getDefaultInstanceForType() {
+        return com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mkpassi.protobuf.SpringTestingProtobuf.ItemList build() {
+        com.mkpassi.protobuf.SpringTestingProtobuf.ItemList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mkpassi.protobuf.SpringTestingProtobuf.ItemList buildPartial() {
+        com.mkpassi.protobuf.SpringTestingProtobuf.ItemList result = new com.mkpassi.protobuf.SpringTestingProtobuf.ItemList(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.mkpassi.protobuf.SpringTestingProtobuf.ItemList result) {
+        if (itemsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            items_ = java.util.Collections.unmodifiableList(items_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.items_ = items_;
+        } else {
+          result.items_ = itemsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.mkpassi.protobuf.SpringTestingProtobuf.ItemList result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mkpassi.protobuf.SpringTestingProtobuf.ItemList) {
+          return mergeFrom((com.mkpassi.protobuf.SpringTestingProtobuf.ItemList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mkpassi.protobuf.SpringTestingProtobuf.ItemList other) {
+        if (other == com.mkpassi.protobuf.SpringTestingProtobuf.ItemList.getDefaultInstance()) return this;
+        if (itemsBuilder_ == null) {
+          if (!other.items_.isEmpty()) {
+            if (items_.isEmpty()) {
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureItemsIsMutable();
+              items_.addAll(other.items_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.items_.isEmpty()) {
+            if (itemsBuilder_.isEmpty()) {
+              itemsBuilder_.dispose();
+              itemsBuilder_ = null;
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              itemsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getItemsFieldBuilder() : null;
+            } else {
+              itemsBuilder_.addAllMessages(other.items_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.mkpassi.protobuf.SpringTestingProtobuf.Item m =
+                    input.readMessage(
+                        com.mkpassi.protobuf.SpringTestingProtobuf.Item.parser(),
+                        extensionRegistry);
+                if (itemsBuilder_ == null) {
+                  ensureItemsIsMutable();
+                  items_.add(m);
+                } else {
+                  itemsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.mkpassi.protobuf.SpringTestingProtobuf.Item> items_ =
+        java.util.Collections.emptyList();
+      private void ensureItemsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          items_ = new java.util.ArrayList<com.mkpassi.protobuf.SpringTestingProtobuf.Item>(items_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.mkpassi.protobuf.SpringTestingProtobuf.Item, com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder, com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder> itemsBuilder_;
+
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public java.util.List<com.mkpassi.protobuf.SpringTestingProtobuf.Item> getItemsList() {
+        if (itemsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(items_);
+        } else {
+          return itemsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public int getItemsCount() {
+        if (itemsBuilder_ == null) {
+          return items_.size();
+        } else {
+          return itemsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public com.mkpassi.protobuf.SpringTestingProtobuf.Item getItems(int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);
+        } else {
+          return itemsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder setItems(
+          int index, com.mkpassi.protobuf.SpringTestingProtobuf.Item value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.set(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder setItems(
+          int index, com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder addItems(com.mkpassi.protobuf.SpringTestingProtobuf.Item value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder addItems(
+          int index, com.mkpassi.protobuf.SpringTestingProtobuf.Item value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder addItems(
+          com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder addItems(
+          int index, com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder addAllItems(
+          java.lang.Iterable<? extends com.mkpassi.protobuf.SpringTestingProtobuf.Item> values) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
+          onChanged();
+        } else {
+          itemsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder clearItems() {
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public Builder removeItems(int index) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.remove(index);
+          onChanged();
+        } else {
+          itemsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder getItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder getItemsOrBuilder(
+          int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);  } else {
+          return itemsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public java.util.List<? extends com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder> 
+           getItemsOrBuilderList() {
+        if (itemsBuilder_ != null) {
+          return itemsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(items_);
+        }
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder addItemsBuilder() {
+        return getItemsFieldBuilder().addBuilder(
+            com.mkpassi.protobuf.SpringTestingProtobuf.Item.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder addItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().addBuilder(
+            index, com.mkpassi.protobuf.SpringTestingProtobuf.Item.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .mkpassi.Item items = 1;</code>
+       */
+      public java.util.List<com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder> 
+           getItemsBuilderList() {
+        return getItemsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.mkpassi.protobuf.SpringTestingProtobuf.Item, com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder, com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder> 
+          getItemsFieldBuilder() {
+        if (itemsBuilder_ == null) {
+          itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.mkpassi.protobuf.SpringTestingProtobuf.Item, com.mkpassi.protobuf.SpringTestingProtobuf.Item.Builder, com.mkpassi.protobuf.SpringTestingProtobuf.ItemOrBuilder>(
+                  items_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          items_ = null;
+        }
+        return itemsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mkpassi.ItemList)
+    }
+
+    // @@protoc_insertion_point(class_scope:mkpassi.ItemList)
+    private static final com.mkpassi.protobuf.SpringTestingProtobuf.ItemList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mkpassi.protobuf.SpringTestingProtobuf.ItemList();
+    }
+
+    public static com.mkpassi.protobuf.SpringTestingProtobuf.ItemList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ItemList>
+        PARSER = new com.google.protobuf.AbstractParser<ItemList>() {
+      @java.lang.Override
+      public ItemList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ItemList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ItemList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mkpassi.protobuf.SpringTestingProtobuf.ItemList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ItemOrBuilder extends
       // @@protoc_insertion_point(interface_extends:mkpassi.Item)
       com.google.protobuf.MessageOrBuilder {
@@ -38,13 +820,13 @@ public final class SpringTestingProtobuf {
         getNameBytes();
 
     /**
-     * <code>float price = 4;</code>
+     * <code>float price = 3;</code>
      * @return The price.
      */
     float getPrice();
 
     /**
-     * <code>int32 quantity = 3;</code>
+     * <code>int32 quantity = 4;</code>
      * @return The quantity.
      */
     int getQuantity();
@@ -135,10 +917,10 @@ public final class SpringTestingProtobuf {
       }
     }
 
-    public static final int PRICE_FIELD_NUMBER = 4;
+    public static final int PRICE_FIELD_NUMBER = 3;
     private float price_ = 0F;
     /**
-     * <code>float price = 4;</code>
+     * <code>float price = 3;</code>
      * @return The price.
      */
     @java.lang.Override
@@ -146,10 +928,10 @@ public final class SpringTestingProtobuf {
       return price_;
     }
 
-    public static final int QUANTITY_FIELD_NUMBER = 3;
+    public static final int QUANTITY_FIELD_NUMBER = 4;
     private int quantity_ = 0;
     /**
-     * <code>int32 quantity = 3;</code>
+     * <code>int32 quantity = 4;</code>
      * @return The quantity.
      */
     @java.lang.Override
@@ -177,11 +959,11 @@ public final class SpringTestingProtobuf {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (quantity_ != 0) {
-        output.writeInt32(3, quantity_);
-      }
       if (java.lang.Float.floatToRawIntBits(price_) != 0) {
-        output.writeFloat(4, price_);
+        output.writeFloat(3, price_);
+      }
+      if (quantity_ != 0) {
+        output.writeInt32(4, quantity_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -199,13 +981,13 @@ public final class SpringTestingProtobuf {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (quantity_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, quantity_);
-      }
       if (java.lang.Float.floatToRawIntBits(price_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, price_);
+          .computeFloatSize(3, price_);
+      }
+      if (quantity_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, quantity_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -527,16 +1309,16 @@ public final class SpringTestingProtobuf {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 24: {
-                quantity_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 24
-              case 37: {
+              case 29: {
                 price_ = input.readFloat();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 37
+              } // case 29
+              case 32: {
+                quantity_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -660,7 +1442,7 @@ public final class SpringTestingProtobuf {
 
       private float price_ ;
       /**
-       * <code>float price = 4;</code>
+       * <code>float price = 3;</code>
        * @return The price.
        */
       @java.lang.Override
@@ -668,7 +1450,7 @@ public final class SpringTestingProtobuf {
         return price_;
       }
       /**
-       * <code>float price = 4;</code>
+       * <code>float price = 3;</code>
        * @param value The price to set.
        * @return This builder for chaining.
        */
@@ -680,7 +1462,7 @@ public final class SpringTestingProtobuf {
         return this;
       }
       /**
-       * <code>float price = 4;</code>
+       * <code>float price = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearPrice() {
@@ -692,7 +1474,7 @@ public final class SpringTestingProtobuf {
 
       private int quantity_ ;
       /**
-       * <code>int32 quantity = 3;</code>
+       * <code>int32 quantity = 4;</code>
        * @return The quantity.
        */
       @java.lang.Override
@@ -700,7 +1482,7 @@ public final class SpringTestingProtobuf {
         return quantity_;
       }
       /**
-       * <code>int32 quantity = 3;</code>
+       * <code>int32 quantity = 4;</code>
        * @param value The quantity to set.
        * @return This builder for chaining.
        */
@@ -712,7 +1494,7 @@ public final class SpringTestingProtobuf {
         return this;
       }
       /**
-       * <code>int32 quantity = 3;</code>
+       * <code>int32 quantity = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuantity() {
@@ -786,6 +1568,11 @@ public final class SpringTestingProtobuf {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mkpassi_ItemList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mkpassi_ItemList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mkpassi_Item_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -800,17 +1587,24 @@ public final class SpringTestingProtobuf {
   static {
     java.lang.String[] descriptorData = {
       "\n\036resources/springboottest.proto\022\007mkpass" +
-      "i\"A\n\004Item\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005p" +
-      "rice\030\004 \001(\002\022\020\n\010quantity\030\003 \001(\005B-\n\024com.mkpa" +
-      "ssi.protobufB\025SpringTestingProtobufb\006pro" +
-      "to3"
+      "i\"(\n\010ItemList\022\034\n\005items\030\001 \003(\0132\r.mkpassi.I" +
+      "tem\"A\n\004Item\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n" +
+      "\005price\030\003 \001(\002\022\020\n\010quantity\030\004 \001(\005B-\n\024com.mk" +
+      "passi.protobufB\025SpringTestingProtobufb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_mkpassi_Item_descriptor =
+    internal_static_mkpassi_ItemList_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_mkpassi_ItemList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mkpassi_ItemList_descriptor,
+        new java.lang.String[] { "Items", });
+    internal_static_mkpassi_Item_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_mkpassi_Item_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mkpassi_Item_descriptor,

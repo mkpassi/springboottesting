@@ -3,11 +3,15 @@ package mkpassi;
 option java_package = "com.mkpassi.protobuf";
 option java_outer_classname = "SpringTestingProtobuf";
 
+message ItemList {
+    repeated Item items = 1;
+}
+
 message Item {
     int32 id = 1;
     string name = 2;
-    float price = 4;
-    int32 quantity = 3;
+    float price = 3;
+    int32 quantity = 4;
 }
 
 

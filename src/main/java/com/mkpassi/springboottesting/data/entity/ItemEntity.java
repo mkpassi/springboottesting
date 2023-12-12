@@ -3,9 +3,11 @@ package com.mkpassi.springboottesting.data.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "item")
-public class ItemEntity {
+public class ItemEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
