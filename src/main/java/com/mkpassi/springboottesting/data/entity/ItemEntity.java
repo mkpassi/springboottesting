@@ -16,6 +16,9 @@ public class ItemEntity implements Serializable {
     private float price;
     private int quantity;
 
+    @Transient
+    private float value;
+
     public ItemEntity() {
     }
 
@@ -24,6 +27,14 @@ public class ItemEntity implements Serializable {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+    }
+
+    public float getValue() {
+        return value;
+    }
+
+    public void setValue(float value) {
+        this.value = value;
     }
 
     public int getId() {

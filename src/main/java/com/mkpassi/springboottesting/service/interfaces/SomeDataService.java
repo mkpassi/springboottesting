@@ -1,4 +1,4 @@
-package com.mkpassi.springboottesting.service;
+package com.mkpassi.springboottesting.service.interfaces;
 
 public interface SomeDataService {
 

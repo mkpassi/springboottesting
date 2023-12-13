@@ -1,6 +1,6 @@
 package com.mkpassi.springboottesting.buisness;
 
-import com.mkpassi.springboottesting.service.SomeDataService;
+import com.mkpassi.springboottesting.service.interfaces.SomeDataService;
 import org.junit.jupiter.api.Test;
 
 public class SimpleSumStubTest {

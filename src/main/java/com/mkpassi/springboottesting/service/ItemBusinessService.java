@@ -1,16 +1,13 @@
 package com.mkpassi.springboottesting.service;
 
-import com.mkpassi.protobuf.SpringTestingProtobuf;
 import com.mkpassi.protobuf.SpringTestingProtobuf.Item;
 import com.mkpassi.springboottesting.data.entity.ItemEntity;
 import com.mkpassi.springboottesting.data.repository.ItemRepository;
 import com.mkpassi.springboottesting.mapper.ItemMapper;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import com.mkpassi.springboottesting.service.interfaces.IItemBusinessService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ItemBusinessService implements IItemBusinessService {
@@ -21,12 +18,14 @@ public class ItemBusinessService implements IItemBusinessService {
     @Autowired
     ItemMapper itemMapper;
 
-    @Override
-    public List<Item> retrieveAllItems() {
-        List<ItemEntity> itemList = itemRepository.findAll();
-       // log.info("itemList: {}", itemList);
-        return itemMapper.ItemEntityListToItemList(itemList);
-    }
+  @Override
+  public List<Item> retrieveAllItems() {
+    List<ItemEntity> itemList = itemRepository.findAll();
+    itemList.stream()
+        .forEach(
+            itemEntity -> itemEntity.setValue(itemEntity.getPrice() * itemEntity.getQuantity()));
+    return itemMapper.ItemEntityListToItemList(itemList);
+  }
 
     @Override
     public Item retrieveHardcodedItem() {

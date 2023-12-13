@@ -1,6 +1,6 @@
 package com.mkpassi.springboottesting.buisness;
 
-import com.mkpassi.springboottesting.service.SomeDataService;
+import com.mkpassi.springboottesting.service.interfaces.SomeDataService;
 
 public class SimpleSum {
 

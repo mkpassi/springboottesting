@@ -830,6 +830,12 @@ public final class SpringTestingProtobuf {
      * @return The quantity.
      */
     int getQuantity();
+
+    /**
+     * <code>float value = 5;</code>
+     * @return The value.
+     */
+    float getValue();
   }
   /**
    * Protobuf type {@code mkpassi.Item}
@@ -939,6 +945,17 @@ public final class SpringTestingProtobuf {
       return quantity_;
     }
 
+    public static final int VALUE_FIELD_NUMBER = 5;
+    private float value_ = 0F;
+    /**
+     * <code>float value = 5;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public float getValue() {
+      return value_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -965,6 +982,9 @@ public final class SpringTestingProtobuf {
       if (quantity_ != 0) {
         output.writeInt32(4, quantity_);
       }
+      if (java.lang.Float.floatToRawIntBits(value_) != 0) {
+        output.writeFloat(5, value_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -988,6 +1008,10 @@ public final class SpringTestingProtobuf {
       if (quantity_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, quantity_);
+      }
+      if (java.lang.Float.floatToRawIntBits(value_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, value_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1013,6 +1037,9 @@ public final class SpringTestingProtobuf {
               other.getPrice())) return false;
       if (getQuantity()
           != other.getQuantity()) return false;
+      if (java.lang.Float.floatToIntBits(getValue())
+          != java.lang.Float.floatToIntBits(
+              other.getValue())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1033,6 +1060,9 @@ public final class SpringTestingProtobuf {
           getPrice());
       hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
       hash = (53 * hash) + getQuantity();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getValue());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1168,6 +1198,7 @@ public final class SpringTestingProtobuf {
         name_ = "";
         price_ = 0F;
         quantity_ = 0;
+        value_ = 0F;
         return this;
       }
 
@@ -1212,6 +1243,9 @@ public final class SpringTestingProtobuf {
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.quantity_ = quantity_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.value_ = value_;
         }
       }
 
@@ -1273,6 +1307,9 @@ public final class SpringTestingProtobuf {
         if (other.getQuantity() != 0) {
           setQuantity(other.getQuantity());
         }
+        if (other.getValue() != 0F) {
+          setValue(other.getValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1319,6 +1356,11 @@ public final class SpringTestingProtobuf {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 45: {
+                value_ = input.readFloat();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 45
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1503,6 +1545,38 @@ public final class SpringTestingProtobuf {
         onChanged();
         return this;
       }
+
+      private float value_ ;
+      /**
+       * <code>float value = 5;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public float getValue() {
+        return value_;
+      }
+      /**
+       * <code>float value = 5;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(float value) {
+
+        value_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float value = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        value_ = 0F;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1588,10 +1662,10 @@ public final class SpringTestingProtobuf {
     java.lang.String[] descriptorData = {
       "\n\036resources/springboottest.proto\022\007mkpass" +
       "i\"(\n\010ItemList\022\034\n\005items\030\001 \003(\0132\r.mkpassi.I" +
-      "tem\"A\n\004Item\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n" +
-      "\005price\030\003 \001(\002\022\020\n\010quantity\030\004 \001(\005B-\n\024com.mk" +
-      "passi.protobufB\025SpringTestingProtobufb\006p" +
-      "roto3"
+      "tem\"P\n\004Item\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n" +
+      "\005price\030\003 \001(\002\022\020\n\010quantity\030\004 \001(\005\022\r\n\005value\030" +
+      "\005 \001(\002B-\n\024com.mkpassi.protobufB\025SpringTes" +
+      "tingProtobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1608,7 +1682,7 @@ public final class SpringTestingProtobuf {
     internal_static_mkpassi_Item_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mkpassi_Item_descriptor,
-        new java.lang.String[] { "Id", "Name", "Price", "Quantity", });
+        new java.lang.String[] { "Id", "Name", "Price", "Quantity", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

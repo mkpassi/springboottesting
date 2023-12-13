@@ -2,9 +2,8 @@ package com.mkpassi.springboottesting.controller;
 
 import static com.mkpassi.protobuf.SpringTestingProtobuf.Item;
 
-import com.mkpassi.protobuf.SpringTestingProtobuf;
 import com.mkpassi.protobuf.SpringTestingProtobuf.ItemList;
-import com.mkpassi.springboottesting.service.IItemBusinessService;
+import com.mkpassi.springboottesting.service.interfaces.IItemBusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.converter.HttpMessageConversionException;
@@ -27,12 +26,12 @@ public class ItemController {
     return Item.newBuilder().setId(1).setName("Ball").setPrice(10).setQuantity(10).build();
   }
 
-  @RequestMapping(method = RequestMethod.GET, path = "/item-from-business-service")
+  @RequestMapping(method = RequestMethod.GET, path = "/item-from-business-service", produces = "application/json")
   public Item itemFromBusinessService() {
     return itemBusinessService.retrieveHardcodedItem();
   }
 
-  @RequestMapping(method = RequestMethod.GET, path = "/all-items-from-database")
+  @RequestMapping(method = RequestMethod.GET, path = "/all-items-from-database", produces = "application/json")
   public ItemList retrieveAllItems() {
       try{
         List<Item> items = itemBusinessService.retrieveAllItems();

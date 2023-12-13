@@ -1,7 +1,7 @@
-package com.mkpassi.springboottesting.buisness;
+package com.mkpassi.springboottesting.service;
 
 import com.mkpassi.protobuf.SpringTestingProtobuf.Item;
-import com.mkpassi.springboottesting.service.IItemBusinessService;
+import com.mkpassi.springboottesting.service.interfaces.IItemBusinessService;
 import org.springframework.stereotype.Service;
 
 @Service
