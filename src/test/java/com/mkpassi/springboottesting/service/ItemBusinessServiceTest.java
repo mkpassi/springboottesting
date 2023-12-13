@@ -12,7 +12,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mockito;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
@@ -20,9 +20,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 class ItemBusinessServiceTest {
   @InjectMocks
   private ItemBusinessService service;
-  @MockBean
+  @Mock
   private ItemRepository repository;
-  @MockBean
+  @Mock
   private ItemMapper mapper;
 
   @Test
@@ -31,8 +31,8 @@ class ItemBusinessServiceTest {
         Arrays.asList(new ItemEntity(2, "Item2", 10, 10), new ItemEntity(3, "Item3", 20, 20));
     List<Item> itemList =
         Arrays.asList(
-            Item.newBuilder().setId(2).setName("Item2").setPrice(10).setQuantity(10).build(),
-            Item.newBuilder().setId(3).setName("Item3").setPrice(20).setQuantity(20).build());
+            Item.newBuilder().setId(2).setName("Item2").setPrice(10).setQuantity(10).setValue(100).build(),
+            Item.newBuilder().setId(3).setName("Item3").setPrice(20).setQuantity(20).setValue(400).build());
     when(repository.findAll()).thenReturn(itemEntityList);
     when(mapper.ItemEntityListToItemList(anyList())).thenReturn(itemList);
     List<Item> items = service.retrieveAllItems();
