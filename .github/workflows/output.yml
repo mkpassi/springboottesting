@@ -6,4 +6,4 @@ jobs :
     steps :
       - name : Output GitHub context
         run : echo "The repository is ${{ github.repository }}" |
-              echo "The json context is ${{ toJson(github) }}"
+              echo "The json context object is ${{ toJson(github) }}"
