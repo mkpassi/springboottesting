@@ -21,7 +21,7 @@ public class ItemBusinessService implements IItemBusinessService {
   @Override
   public List<Item> retrieveAllItems() {
     List<ItemEntity> itemList = itemRepository.findAll();
-    itemList.stream()
+    itemList
         .forEach(
             itemEntity -> itemEntity.setValue(itemEntity.getPrice() * itemEntity.getQuantity()));
     return itemMapper.ItemEntityListToItemList(itemList);
